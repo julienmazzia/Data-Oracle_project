@@ -1,0 +1,13 @@
+package main;
+
+import Controller.IHMController;
+
+public class main {
+	
+	IHMController IHM = new IHMController();
+	
+	public static void main(String[] args) {
+
+	}
+
+}

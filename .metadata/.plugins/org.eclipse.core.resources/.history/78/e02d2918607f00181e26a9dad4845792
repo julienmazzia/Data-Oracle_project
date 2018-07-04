@@ -1,0 +1,5 @@
+package View;
+
+public enum test {
+	gaz: 1,59,
+}

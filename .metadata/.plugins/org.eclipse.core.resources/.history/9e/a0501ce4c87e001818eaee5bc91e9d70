@@ -1,0 +1,11 @@
+package Controller;
+
+public class customRow {
+	public String country;
+	public String container;
+	public String commandDate;
+	public String expectedReception;
+	public String expeditionDate;
+	public String ReceptionDate;
+	public String[] Candies;
+}

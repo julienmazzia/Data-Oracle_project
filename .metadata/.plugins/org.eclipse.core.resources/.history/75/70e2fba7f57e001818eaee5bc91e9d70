@@ -1,0 +1,55 @@
+package View;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+
+public class scenarioForm extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					scenarioForm frame = new scenarioForm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public scenarioForm() {
+		this.setLocationRelativeTo(null);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    this.setTitle("JTable");
+	    this.setSize(800, 800);
+
+	    //Les données du tableau
+	    Object[][] data = {};
+
+	    //Les titres des colonnes
+	    String  title[] = {"Index", "Pays", "Date de la commande", "Date de réception especté", "Date expédition"};
+	    JTable tableau = new JTable(data, title);
+	    //Nous ajoutons notre tableau à notre contentPane dans un scroll
+	    //Sinon les titres des colonnes ne s'afficheront pas !
+	    this.getContentPane().add(new JScrollPane(tableau));
+	    this.getContentPane().setSize(300, 800);
+	    this.getContentPane().add(new JScrollPane(tableau), BorderLayout.CENTER);
+	}
+
+}

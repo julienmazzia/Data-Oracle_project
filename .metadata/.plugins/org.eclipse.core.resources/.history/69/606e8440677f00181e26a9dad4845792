@@ -1,0 +1,23 @@
+package Model;
+
+import java.util.ArrayList;
+
+public class Order {
+	public int order;
+	public String name;
+	public String firstName;
+	public String adress;
+	public int code;
+	public String city;
+	public String payment;
+	public int cost;
+	public String country;
+	
+	public String container;
+	public String buyDate;
+	public String Exp;
+	public String Recep;
+	
+	public ArrayList<candy[]> candies;
+	public candy[] candy;
+}

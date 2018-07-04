@@ -1,0 +1,5 @@
+package Model;
+
+public enum adress {
+	Adresse1("Avenue des Berlingots");
+}

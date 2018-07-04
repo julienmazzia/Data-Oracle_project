@@ -1,0 +1,7 @@
+package Controller;
+import View.ScenarioForm;
+
+public class customRow {
+	ScenarioForm frame = new ScenarioForm();
+	
+}

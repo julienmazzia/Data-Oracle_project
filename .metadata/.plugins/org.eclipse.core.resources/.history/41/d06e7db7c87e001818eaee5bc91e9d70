@@ -1,0 +1,12 @@
+package Controller;
+
+import java.util.ArrayList;
+
+public class IHMController {
+	private String scenarioName;
+	private int numbOrders;
+	private int valueTypeOrders;
+	private int valueCandyType;
+	private int valueComponentType;
+	private ArrayList<customRow>[] customValue;
+}

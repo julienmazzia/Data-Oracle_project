@@ -1,0 +1,12 @@
+package Controller;
+
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class IHMController {
+	private String scenarioName;
+	private int numbOrders;
+	private int valueTypeOrders;
+	private int valueCandyType;
+	private int valueComponentType;
+	private customRow[] customValue;
+}

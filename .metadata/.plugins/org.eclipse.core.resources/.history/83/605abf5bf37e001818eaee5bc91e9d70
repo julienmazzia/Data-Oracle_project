@@ -1,0 +1,9 @@
+package Controller;
+
+import java.util.ArrayList;
+
+import View.ScenarioForm;
+
+public class IHMController {
+	ScenarioForm frame = new ScenarioForm();
+}
