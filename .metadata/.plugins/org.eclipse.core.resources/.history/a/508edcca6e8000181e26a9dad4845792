@@ -1,0 +1,24 @@
+package Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StockCreator {
+	public static List<Stock> createStock(String type){
+		List<Stock> stocks = new ArrayList<Stock>();
+		int lenght;
+		Stock stock;
+		
+		lenght = Stock.create(type).getNumberOfElement();
+		for(int i=0; i<lenght; i++){
+			stock = Stock.create(type);
+			stock.addStock(i);
+			stocks.add(stock);
+		}
+		
+		for (Stock stockf : stocks) {
+			System.out.println(stockf.type);
+		}
+		return stocks;
+	}
+}

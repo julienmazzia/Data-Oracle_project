@@ -13,3 +13,18 @@
 1530695876944	Delete element
 1530695882028	Delete element
 1530695949656	Delete element
+1530704406519	Move compilation unit
+1530727193437	Delete element
+1530731542778	Delete element
+1530733404324	Rename type 'candy'
+1530733856611	Delete element
+1530740129514	Rename type 'OracleController'
+1530741745209	Rename method 'createCandy'
+1530774144837	Rename type 'Observateur'
+1530774637877	Rename type 'observer'
+1530776866709	Delete element
+1530809040246	Delete element
+1530809781649	Rename type 'CAD_Oracle'
+1530809982017	Rename type 'OracleFiller'
+1530811333167	Rename field 'order'
+1530819273734	Delete element

@@ -1,0 +1,19 @@
+package Model;
+
+import java.sql.Connection;
+
+public class CAD_Oracle {
+	
+	private CAD_Oracle(){
+		
+	}
+	
+	private static CAD_Oracle connection = null;
+	
+	public static CAD_Oracle getConnection(){
+		if( connection == null){
+			connection = new CAD_Oracle();
+		}
+		return connection;
+	}
+}

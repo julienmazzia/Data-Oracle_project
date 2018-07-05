@@ -1,0 +1,16 @@
+package Model;
+
+public enum rangeKeeper {
+	SRANDARD("500"),
+	RANDOM("200");
+	
+	private String name;
+	
+	rangeKeeper(String type){
+		this.name = type;
+	}
+	
+	public int range(){
+		return range;
+	}
+}

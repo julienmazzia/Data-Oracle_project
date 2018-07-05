@@ -1,0 +1,12 @@
+package Model;
+
+public class DataSetBuilder {
+	
+	public static void CreateOrders(int number, String type){
+		OrderCreator.createOrders(number, type);
+	}
+	
+	public static void CreateStock(String typeB, String typeC){
+		StockCreator.createStock(typeB, typeC);
+	}
+}

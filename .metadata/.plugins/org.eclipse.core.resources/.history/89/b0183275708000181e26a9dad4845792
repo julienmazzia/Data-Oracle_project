@@ -1,0 +1,20 @@
+package Controller;
+
+import java.util.List;
+
+import Model.*;
+import View.Observer;
+
+
+
+
+public class DataSetController implements Observer{
+
+	@Override
+	public void update(int number) {
+		List<Order> order = Model.OrderCreator.createOrders(number);
+		List<Stock> stockB = Model.StockCreator.createStock("Bonbon");
+		List<Stock> stockC = Model.StockCreator.createStock("Composant");
+		OracleController.OracleLauncher();
+	}
+}

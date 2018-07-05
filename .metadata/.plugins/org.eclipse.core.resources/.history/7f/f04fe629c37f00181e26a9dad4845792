@@ -1,0 +1,12 @@
+package Model;
+
+public class DataSetBuilder {
+	
+	public static void CreateOrders(int number){
+		Order[] tabOrder = OrderCreator.createOrders(number);
+	}
+	
+	public static void CreateStock(){
+		StockCreator.createStock();
+	}
+}

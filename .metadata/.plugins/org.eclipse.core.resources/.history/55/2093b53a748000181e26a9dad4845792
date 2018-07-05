@@ -1,0 +1,23 @@
+package Controller;
+
+import java.util.List;
+
+import Model.Order;
+import Model.Stock;
+
+public class OracleController {
+	
+	List<Order> order;
+	List<Stock> stockB;
+	List<Stock> stockC;
+	
+	public OracleController(DataSetController dataSet){
+		order = dataSet.getOrders();
+		stockB = dataSet.getStockB();
+		stockC = dataSet.getStockC();
+	}
+	
+	
+	
+	
+}

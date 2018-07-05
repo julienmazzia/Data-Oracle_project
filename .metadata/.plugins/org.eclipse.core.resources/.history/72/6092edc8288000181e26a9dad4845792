@@ -1,0 +1,22 @@
+package Controller;
+
+import Model.*;
+import View.Observer;
+
+
+
+
+public class DataSetController implements Observer{
+	private int number;
+	
+	public DataSetController(){
+		Order[] order = Model.OrderCreator.createOrders(this.number);
+		Stock[] stock = Model.StockCreator.createStock();
+	}
+
+	@Override
+	public void update(int number) {
+		// TODO Auto-generated method stub
+		
+	}
+}

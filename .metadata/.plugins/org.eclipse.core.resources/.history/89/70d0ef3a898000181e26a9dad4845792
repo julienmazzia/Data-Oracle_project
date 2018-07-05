@@ -1,0 +1,24 @@
+package Model;
+
+public enum Names {
+	STRING_ONE("ONE"),
+    STRING_TWO("TWO")
+    ;
+
+    private final String text;
+
+    /**
+     * @param text
+     */
+    Names(final String text) {
+        this.text = text;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Enum#toString()
+     */
+    @Override
+    public String toString() {
+        return text;
+    }
+}

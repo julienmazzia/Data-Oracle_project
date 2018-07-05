@@ -1,0 +1,12 @@
+package Controller;
+
+import java.util.List;
+
+import Model.Order;
+import Model.Stock;
+
+public class OracleController {
+	public static void OracleLauncher(List<Order> order, List<Stock> stockB, List<Stock> stockC){
+		
+	}
+}

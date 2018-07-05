@@ -1,0 +1,31 @@
+package Model;
+
+public enum FirstNames {
+	Firstname_1("Kalinski"),
+	Firstname_2("De Gaulle"),
+	Firstname_3("Bonaparte"),
+	Firstname_4("Bell"),
+	Firstname_5("Pelfort"),
+	Firstname_6("Fibonaccio"),
+	Firstname_7("Iglesias"),
+	Firstname_8("Dürbrodsky"),
+	Firstname_9("Ford"),
+    ;
+
+    private final String text;
+
+    /**
+     * @param text
+     */
+    FirstNames(final String text) {
+        this.text = text;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Enum#toString()
+     */
+    @Override
+    public String toString() {
+        return text;
+    }
+}

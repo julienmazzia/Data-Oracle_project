@@ -1,0 +1,20 @@
+package Controller;
+
+import Model.*;
+import View.Observer;
+
+
+
+
+public class DataSetController implements Observer{
+	public DataSetController(){
+		Order[] order = Model.OrderCreator.createOrders((int)scenarioViewData[0]);
+		Stock[] stock = Model.StockCreator.createStock();
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+}

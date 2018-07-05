@@ -1,0 +1,34 @@
+package Model;
+
+public class StockCreator {
+	public static void createStock(){
+		double marge_erreurB;
+		double marge_erreurC;
+		
+		switch(typeB){
+			case "normale":
+				marge_erreurB = 0.01;
+				break;
+			case "critique":
+				marge_erreurB = 0.05;
+				break;
+			case "fort":
+				marge_erreurB = 0.1;
+				break;
+		}
+		
+		switch(typeC){
+		case "faible":
+			marge_erreurC = 0.01;
+			break;
+		case "moyen":
+			marge_erreurC = 0.05;
+			break;
+		case "fort":
+			marge_erreurC = 0.1;
+			break;
+	}
+		Stock.createStock("Bonbon");
+		Stock.createStock("Composant");
+	}
+}

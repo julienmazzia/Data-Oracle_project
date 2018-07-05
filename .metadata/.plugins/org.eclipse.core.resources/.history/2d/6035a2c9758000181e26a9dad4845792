@@ -1,0 +1,16 @@
+package Model;
+
+public class OracleDatabaseFiller {
+	public void fillClientTable(String name, String firstname, String adress, int code, String city, String mail, String country){
+		
+	}
+	
+	public void fillCommandTable(String BuyDate, String expec, String reception){
+		
+	}
+	
+	public void fillStockBonbon(int command){
+		
+	}
+
+}

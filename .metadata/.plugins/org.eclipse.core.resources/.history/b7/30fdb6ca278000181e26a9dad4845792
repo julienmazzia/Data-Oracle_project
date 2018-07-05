@@ -1,0 +1,14 @@
+package main;
+
+import View.Scenario;
+import Controller.IHMController;
+
+public class main {
+	
+	public static void main(String[] args) {
+		Scenario scenario = new Scenario();
+		IHMController IHM = new IHMController();
+		scenario.AddObs(IHM);
+	}
+
+}

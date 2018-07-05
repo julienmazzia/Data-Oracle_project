@@ -1,0 +1,31 @@
+package Model;
+
+public enum Names {
+	Object_1("Kalinski"),
+	Object_2("De Gaulle"),
+	Object_3("Bonaparte"),
+	Object_4("Bell"),
+	Object_5("Pelfort"),
+	Object_6("Fibonaccio"),
+	Object_7("Iglesias"),
+	Object_8("Dürbrodsky"),
+	Object_9("Ford"),
+    ;
+
+    private final String text;
+
+    /**
+     * @param text
+     */
+    Names(final String text) {
+        this.text = text;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Enum#toString()
+     */
+    @Override
+    public String toString() {
+        return text;
+    }
+}

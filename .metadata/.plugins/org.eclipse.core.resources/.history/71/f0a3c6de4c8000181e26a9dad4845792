@@ -1,0 +1,14 @@
+package main;
+
+import View.Scenario;
+import Controller.DataSetController;
+
+public class main {
+	
+	public static void main(String[] args) {
+		Scenario scenario = new Scenario();
+		DataSetController DSC = new DataSetController();
+		scenario.AddObs(DSC);
+	}
+
+}

@@ -1,0 +1,13 @@
+package Controller;
+
+import Model.*;
+
+
+
+
+public class OracleController {
+	public OracleController(Object[] scenarioViewData, Object[][] customValue){
+		Order[] order = Model.OrderCreator.createOrders((int)scenarioViewData[0]);
+		Stock[] stock = Model.StockCreator.createStock();
+	}
+}

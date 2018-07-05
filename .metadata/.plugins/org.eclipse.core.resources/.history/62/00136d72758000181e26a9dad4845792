@@ -1,0 +1,8 @@
+package Model;
+
+public class OracleDatabaseFiller {
+	public void fillClientTable(String name, String firstname, String adress, int code, String city, String mail, String country){
+		
+	}
+
+}

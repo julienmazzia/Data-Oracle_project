@@ -1,0 +1,8 @@
+package Model;
+
+public class StockCreator {
+	public static void createStock(String typeB, String typeC){
+		Stock.createStock("Bonbon", typeB);
+		Stock.createStock("Composant", typeC);
+	}
+}

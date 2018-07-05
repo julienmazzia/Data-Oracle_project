@@ -1,0 +1,13 @@
+package Controller;
+
+import Model.*;
+
+
+
+
+public class OracleController {
+	public OracleController(Object[] scenarioViewData, Object[][] customValue){
+		Model.DataSetBuilder.CreateOrders((int)scenarioViewData[0]);
+		Model.DataSetBuilder.CreateStock();
+	}
+}

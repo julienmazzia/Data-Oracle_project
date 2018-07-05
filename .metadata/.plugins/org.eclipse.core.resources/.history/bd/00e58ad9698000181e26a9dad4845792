@@ -1,0 +1,17 @@
+package Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OrderCreator {
+	public static List<Order> createOrders(int number){
+		List<Order> ListOrder = new ArrayList<Order>();
+		Order order;
+		for(int i = 0; i<number; i++){
+			order = Order.create();
+			ListOrder.add(order);
+			System.out.println("name : "+ order.name + " firstname : "+ order.firstname + " adress : "+ order.adress + " code : "+ order.code + " city : "+ order.city + " country : "+ order.country + " container : "+ order.container + " Buy : "+ order.buyDate + " Excep : "+ order.expec + " del : "+ order.recep);
+		}
+		return ListOrder;
+	}
+}

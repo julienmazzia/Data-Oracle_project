@@ -1,0 +1,12 @@
+package Model;
+
+public class StockCreator {
+	public static Stock[] createStock(){
+		Stock[] tabStock = {};
+		
+		tabStock[0] = Stock.createStock("Bonbon");
+		tabStock[1] = Stock.createStock("Composant");
+		
+		return tabStock;
+	}
+}

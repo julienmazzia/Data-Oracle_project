@@ -1,0 +1,13 @@
+package main;
+
+import View.Scenario;
+import Controller.DataSetController;
+import Controller.MainController;
+
+public class main {
+	
+	public static void main(String[] args) {
+		MainController manager = new MainController();
+	}
+
+}

@@ -1,0 +1,17 @@
+package Controller;
+
+import Model.*;
+import View.Observer;
+
+
+
+
+public class DataSetController implements Observer{
+
+	@Override
+	public void update(int number) {
+		System.out.println(number);
+		Order[] order = Model.OrderCreator.createOrders(number);
+		/*Stock[] stock = Model.StockCreator.createStock();*/
+	}
+}

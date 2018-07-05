@@ -1,0 +1,16 @@
+package Controller;
+
+import View.Scenario;
+
+public class MainController {
+	public MainController(){
+		Scenario scenario = new Scenario();
+		DataSetController DSC = new DataSetController();
+		scenario.setVisible(true);
+		scenario.AddObs(DSC);
+	}
+	
+	public static void OracleControllerLauncher(DataSetController dataSet){
+		OracleController oracle = new OracleController(dataSet);
+	}
+}

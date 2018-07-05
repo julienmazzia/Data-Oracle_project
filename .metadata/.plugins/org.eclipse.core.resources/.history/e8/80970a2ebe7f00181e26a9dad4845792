@@ -1,0 +1,10 @@
+package Model;
+
+public class rangeDictionnary {
+
+	public static int[][] rangeArray = {
+		{2, 4, 950, 475},
+		{3, 5, },
+		{}
+	};
+}

@@ -1,0 +1,51 @@
+package Model;
+
+public class candy {
+	public String name;
+	public String color;
+	public String texture;
+	public int quantity;
+	
+	public String[] names = {
+			"Acidofilo",
+			"Bouteille cola",
+			"Brazil pik",
+			"Color Schtroummpf pik",
+			"Langues acides",
+			"London pik",
+			"Miami pik",
+			"Pasta Basta",
+			"Pasta frutta",
+			"Sour snup",
+			"Dragibus",
+			"Carensac",
+			"Fraizibus",
+			"Grain de millet",
+			"Starmint",
+			"Florent violette",
+			"Kimono",
+			"Pain Zan",
+			"Rotella",
+			"Zanoïd",
+			"Fraise tagada",
+			"Croco",
+			"Chamallows",
+			"Polka",
+			"Banane",
+			"Ourson",
+			"Filament"
+			};
+	
+	public String[] colors = {
+			"Rouge",
+			"Orange",
+			"Jaune",
+			"Vert",
+			"Bleu",
+			"Violet",
+			"Noir",
+			"Marron"
+			};
+	
+	public String[] textures = {"mou", "dur"};
+	}

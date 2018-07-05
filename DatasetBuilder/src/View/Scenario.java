@@ -24,6 +24,7 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -32,9 +33,12 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import Controller.OracleController;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Scenario extends JFrame {
+import Controller.DataSetController;
+
+public class Scenario extends JFrame implements IObservable{
 
 	private JPanel contentPane;
 	private JComboBox comboBox_1;
@@ -42,12 +46,14 @@ public class Scenario extends JFrame {
 	private JComboBox comboBox;
 	private Object[][] data = {};
 	private JTextField textField;
-	private OracleController ctrl;
+	private DataSetController ctrl;
+    
+    private ArrayList<Observer> obs = new ArrayList<Observer>();
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -58,7 +64,7 @@ public class Scenario extends JFrame {
 				}
 			}
 		});
-	}
+	}*/
 
 	/**
 	 * Create the frame.
@@ -67,7 +73,7 @@ public class Scenario extends JFrame {
 
 	    //Les titres des colonnes
 	    String  title[] = {"Index", "Pays", "Date de la commande", "Date de réception especté", "Date expédition"};
-	    String[] typeValue = {"standard", "aléatoire", "critique"};
+	    String[] typeValue = {"normale", "critique"};
 		
 		this.setSize(800, 600);
 		
@@ -200,8 +206,8 @@ public class Scenario extends JFrame {
 		JButton btnValider = new JButton("Valider");
 		btnValider.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Object[] scenarioData = {textField.getText(), comboBox_1.toString(), comboBox_2.toString(), comboBox.getSelectedItem().toString()};
-				ctrl = new OracleController(scenarioData, data);
+				Object[] scenarioData = {textField.getText()};
+				notifyObs();
 			}
 		});
 		btnValider.addMouseListener(new MouseAdapter() {
@@ -210,9 +216,18 @@ public class Scenario extends JFrame {
 			}
 		});
 		panel_3.add(btnValider, BorderLayout.EAST);
+	}
+
+	@Override
+	public void AddObs(Observer o) {
+		obs.add(o);
 		
-		/*
-		
-		this.getContentPane().add(tab, BorderLayout.CENTER);*/
+	}
+
+	@Override
+	public void notifyObs() {
+		for(Observer o : obs){
+			o.update(Integer.parseInt(this.textField.getText()));
+		}
 	}
 }

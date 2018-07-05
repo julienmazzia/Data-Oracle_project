@@ -1,0 +1,7 @@
+package View;
+
+import java.util.Observable;
+
+public interface observer {
+	public void actualize(Observable o);
+}

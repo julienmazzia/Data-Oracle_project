@@ -1,0 +1,23 @@
+package Controller;
+
+import Model.*;
+
+
+
+
+public class OracleController {
+	private Object[] scenarioViewData;
+	private Object[][] customValue;
+	private DataSetBuilder builder;
+	
+	public OracleController(Object[] scenarioViewData, Object[][] customValue){
+		this.scenarioViewData = scenarioViewData;
+		this.customValue = customValue;
+		dataSender();
+	}
+	
+	public void dataSender(){
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StockCreator {
+	public static List<Stock> createStock(){
+		List<Stock> Stocks = new ArrayList<Stock>();
+		
+		Stocks.add(Stock.create("Bonbon"));
+		Stocks.add(Stock.create("Composant"));
+		System.out.println(Stocks.size());
+		return Stocks;
+	}
+}

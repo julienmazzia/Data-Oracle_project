@@ -1,0 +1,20 @@
+package Model;
+
+import java.util.Random;
+
+public class Stock {
+	public String name;
+	public int stock;
+	
+	Random r = new Random();
+	
+	public Stock(String name, int type){
+		this.name = name;
+	}
+	
+	public int alea(int maxRange, int minRange){
+		int value = r.nextInt(maxRange - minRange);
+		return value;
+	}
+
+}

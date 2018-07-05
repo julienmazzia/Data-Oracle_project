@@ -1,0 +1,10 @@
+package Model;
+
+public class OrderCreator {
+	public void createOrders(int nombre){
+		Order order;
+		for(int i = 0; i<nombre; i++){
+			order = Order.create(0, 0);
+		}
+	}
+}

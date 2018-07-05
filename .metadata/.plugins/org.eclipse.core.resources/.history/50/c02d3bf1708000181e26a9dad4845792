@@ -1,0 +1,12 @@
+package Controller;
+
+import java.util.List;
+
+import Model.Order;
+import Model.Stock;
+
+public class OracleController {
+	public static void OracleLauncher(DataSetController dataSet){
+		
+	}
+}

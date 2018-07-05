@@ -1,0 +1,17 @@
+package Controller;
+
+import java.util.ArrayList;
+import java.util.Observable;
+
+import View.Observer;
+import View.ScenarioForms;
+
+public class IHMController implements Observer {
+	ScenarioForms frame = new ScenarioForms();
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+}

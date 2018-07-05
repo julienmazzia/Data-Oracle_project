@@ -1,0 +1,19 @@
+package Model;
+
+import java.util.ArrayList;
+
+public class DataSetBuilder {
+	public Order order;
+	
+	public static Order[] CreateOrders(int numbOrders, String type){
+		Order[] Order = null;
+		
+		return Order;
+	}
+	
+	public static Stock[] CreateStock(String typeB, String typeC){
+		Stock[] stock = null;
+		
+		return stock;
+	}
+}

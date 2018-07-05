@@ -1,0 +1,64 @@
+package Model;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+import java.lang.Math;
+
+public class Order {
+	public int order;
+	public String name;
+	public String firstname;
+	public String adress;
+	public int code;
+	public String city;
+	public String country;
+	public String container;
+	
+	public String buyDate;
+	public String expec;
+	public String recep;
+	
+	public Candy[] candies;
+	
+	ArrayList<String[]> valueList = new ArrayList<String[]>();
+	
+	Random r = new Random();
+	
+	private String[] names = {"Kalinski", "De Gaulle", "Bonaparte", "Bell", "Pelfort", "Ford", "Fibonaccio", "Iglesias", "Dürbrodsky"};
+	private String[] firstNames = {"Henri", "Edouard", "Igor", "Antoine", "Philippe", "Ben", "Anna", "Eve", "Emilie", "Eleanor"};
+	private String[] addresses = {"Boulevard des Antilopes","Avenue Berlingot", "Rue du Szimpla Kert", "Place Septon", "Impasse des Roses", "Avenue de la république"};
+	private String[] cities = {"Londres", "Paris", "Townsville", "Stockholm", "Kiev", "Osukowa", "Brescia", "Hambourg"};
+	private String[] payments = {"Espéce", "Chèque", "Visa", "Mastercard", "Bitcoin"};
+	private String[] countries = {"Allemagne", "Autriche", "Belgique", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Grèce",
+									"Hongrie", "Irelande", "Italie", "Lettonie", "Lituanie", "Luxembourg", "Malte", "Pays-Base", "Pologne", "Portugal", "Republique tchèque",
+									"Roumanie", "Royaume-Uni", "Slovaquie", "Slovénie", "Suède", "USA", "Canada", "Mexique", "Japon", "Chine", "Afrique du sud"};
+	private String[] containers = {"Sachet", "Boite", "Echantillon"};
+	private int[] quantContainers = {10, 25, 3};
+	
+	public Order(){
+		valueList.addAll(Arrays.asList(names, firstNames, addresses, cities, payments, countries, containers));
+	}
+	
+	public static Order create(){
+		Order order = new Order();
+		return order;
+	}
+	
+	public int alea(int maxRange){
+		int value = r.nextInt(maxRange - 0);
+		return value;
+	}
+	
+	public Candy[] addCandy(int quantity){
+		int i=0;
+		while(quantity>0){
+			Candy candy = Candy.createCandy(quantity);
+			quantity = quantity - candy.addCandies();
+			candies[i] = candy;
+			i++;
+		}
+		
+		return this.candies;
+	}
+}

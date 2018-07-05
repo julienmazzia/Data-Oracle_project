@@ -1,0 +1,58 @@
+package Model;
+
+import java.util.Random;
+
+public class Stock {
+	public String name;
+	public int stock;
+	
+	private String[] candyNames = {
+			"Acidofilo",
+			"Bouteille cola",
+			"Brazil pik",
+			"Color Schtroummpf pik",
+			"Langues acides",
+			"London pik",
+			"Miami pik",
+			"Pasta Basta",
+			"Pasta frutta",
+			"Sour snup",
+			"Dragibus",
+			"Carensac",
+			"Fraizibus",
+			"Grain de millet",
+			"Starmint",
+			"Florent violette",
+			"Kimono",
+			"Pain Zan",
+			"Rotella",
+			"Zanoïd",
+			"Fraise tagada",
+			"Croco",
+			"Chamallows",
+			"Polka",
+			"Banane",
+			"Ourson",
+			"Filament"
+			};
+	
+	private String[] componentsNames = {
+			"Additifs",
+			"Enrobage",
+			"Arôme",
+			"Gélifiants",
+			"Sucre"
+	};
+	
+	Random r = new Random();
+	
+	public Stock(String name, String type, int valueType){
+		this.name = name;
+	}
+	
+	public int alea(int maxRange, int minRange){
+		int value = r.nextInt(maxRange - minRange);
+		return value;
+	}
+
+}

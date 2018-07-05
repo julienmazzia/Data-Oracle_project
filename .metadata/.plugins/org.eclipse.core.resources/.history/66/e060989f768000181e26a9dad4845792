@@ -1,0 +1,43 @@
+package Controller;
+
+import java.util.List;
+
+import Model.Connection;
+import Model.OracleDatabaseFiller;
+import Model.Order;
+import Model.Stock;
+
+public class OracleController {
+	
+	List<Order> orders;
+	List<Stock> stockB;
+	List<Stock> stockC;
+	Connection connection;
+	OracleDatabaseFiller CAD;
+	
+	public OracleController(DataSetController dataSet){
+		orders = dataSet.getOrders();
+		stockB = dataSet.getStockB();
+		stockC = dataSet.getStockC();
+		getConnection();
+	}
+	
+	public void getConnection(){
+		connection = Connection.getConnection();
+	}
+	
+	public void fillDatabase(){
+		for (Order order : orders) {
+			CAD.fillClientTable(order.command, order.name, order.firstname, order.adress, order.code, order.city, order.mail, order.country);
+		}
+		
+		for (Stock stock : stockB) {
+			
+		}
+
+		for (Stock stock : stockC) {
+			
+		}
+	}
+	
+}

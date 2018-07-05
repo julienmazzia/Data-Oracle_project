@@ -1,0 +1,8 @@
+package View;
+
+import java.util.Observer;
+
+public interface IObservable {
+	public void AddObs(Observer o);
+	public void notifyObs();
+}

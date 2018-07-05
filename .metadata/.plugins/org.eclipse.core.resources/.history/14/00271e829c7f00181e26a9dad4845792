@@ -1,0 +1,15 @@
+package Model;
+
+import java.util.ArrayList;
+
+public class DataSetBuilder {
+	public Order order;
+	
+	public static void CreateOrders(int number, String type){
+		OrderCreator.createOrders(number, type);
+	}
+	
+	public static void CreateStock(String typeB, String typeC){
+		StockCreator.createStock(typeB, typeC);
+	}
+}

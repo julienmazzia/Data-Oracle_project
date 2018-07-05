@@ -1,0 +1,8 @@
+package Model;
+
+public class StockCreator {
+	public static void createStock(){
+		Stock.createStock("Bonbon");
+		Stock.createStock("Composant");
+	}
+}
