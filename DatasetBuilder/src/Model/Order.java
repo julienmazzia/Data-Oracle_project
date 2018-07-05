@@ -1,10 +1,8 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.lang.Math;
 
 public class Order {
 	public static int orderNumber = 0;
@@ -21,38 +19,27 @@ public class Order {
 	public String expec;
 	public String recep;
 	
-	//public Candy[] candies;
 	public List<Candy> candies = new ArrayList<Candy>();
 	
 	Random r = new Random();
-	
-	private String[] adresses = {};
-	private String[] cities = {};
-	private String[] payments = {"Espéce", "Chèque", "Visa", "Mastercard", "Bitcoin"};
-	private String[] countries = {"Allemagne", "Autriche", "Belgique", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Grèce",
-									"Hongrie", "Irelande", "Italie", "Lettonie", "Lituanie", "Luxembourg", "Malte", "Pays-Base", "Pologne", "Portugal", "Republique tchèque",
-									"Roumanie", "Royaume-Uni", "Slovaquie", "Slovénie", "Suède", "USA", "Canada", "Mexique", "Japon", "Chine", "Afrique du sud"};
-	private String[] mails = {"gmail.com", "yahoo.com", "icloud.com"};
-	private String[] containers = {"Sachet", "Boite", "Echantillon"};
-	private int[] quantContainers = {10, 25, 3};
 	
 	public Order(){
 		orderNumber ++;
 		name = Names.values()[alea(Names.values().length)].toString();
 		firstname = FirstNames.values()[alea(FirstNames.values().length)].toString();
-		adress = adresses[alea(adresses.length)];
+		adress = Adresses.values()[alea(Adresses.values().length)].toString();
 		code = alea(10000);
-		city = cities[alea(cities.length)];
-		mail = firstname+"."+name+"@"+mails[alea(mails.length)];
-		country = countries[alea(countries.length)];
+		city = Cities.values()[alea(Cities.values().length)].toString();
+		mail = firstname + "." + name + "@" + MailsType.values()[alea(MailsType.values().length)].toString();
+		country = Countries.values()[alea(Countries.values().length)].toString();
 		String[] dates = createDates();
 		buyDate = dates[0];
 		expec = dates[1];
 		recep = dates[2];
 		
-		int containerValue = alea(containers.length);
-		container = containers[containerValue];
-		addCandy(quantContainers[containerValue]);
+		int containerValue = alea(Containers.values().length);
+		container = Containers.values()[containerValue].toString();
+		addCandy(Containers.values()[containerValue].getQuantity());
 	}
 	
 	public static Order create(){
@@ -109,7 +96,7 @@ public class Order {
 	
 	private void addCandy(int quantity){
 		while(quantity>0){
-			Candy candy = Candy.create(quantity);
+			Candy candy = Candy.create();
 			quantity = quantity - candy.addCandies(quantity);
 			candies.add(candy);
 		}

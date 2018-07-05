@@ -1,7 +1,5 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Candy {
@@ -10,62 +8,16 @@ public class Candy {
 	public String texture;
 	public int quantity;
 	
-	private int max;
-	
-	private String[] names = {
-			"Acidofilo",
-			"Bouteille cola",
-			"Brazil pik",
-			"Color Schtroummpf pik",
-			"Langues acides",
-			"London pik",
-			"Miami pik",
-			"Pasta Basta",
-			"Pasta frutta",
-			"Sour snup",
-			"Dragibus",
-			"Carensac",
-			"Fraizibus",
-			"Grain de millet",
-			"Starmint",
-			"Florent violette",
-			"Kimono",
-			"Pain Zan",
-			"Rotella",
-			"Zanoïd",
-			"Fraise tagada",
-			"Croco",
-			"Chamallows",
-			"Polka",
-			"Banane",
-			"Ourson",
-			"Filament"
-			};
-	
-	private String[] colors = {
-			"Rouge",
-			"Orange",
-			"Jaune",
-			"Vert",
-			"Bleu",
-			"Violet",
-			"Noir",
-			"Marron"
-			};
-	
-	private String[] textures = {"mou", "dur"};
-	
 	Random r = new Random();
 	
-	public Candy(int max){
-		this.max = max;
-		name = names[alea(names.length)];
-		color = colors[alea(colors.length)];
-		texture = textures[alea(textures.length)];
+	public Candy(){
+		name = Candies.values()[alea(Candies.values().length)].toString();
+		color = Colors.values()[alea(Colors.values().length)].toString();
+		texture = Textures.values()[alea(Textures.values().length)].toString();
 	}
 	
-	public static Candy create(int max){
-		Candy candy = new Candy(max);
+	public static Candy create(){
+		Candy candy = new Candy();
 		return candy;
 	}
 	

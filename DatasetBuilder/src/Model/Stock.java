@@ -7,46 +7,7 @@ public class Stock {
 	public String type;
 	public int quantity;
 	
-	private String[] candyNames = {
-			"Acidofilo",
-			"Bouteille cola",
-			"Brazil pik",
-			"Color Schtroummpf pik",
-			"Langues acides",
-			"London pik",
-			"Miami pik",
-			"Pasta Basta",
-			"Pasta frutta",
-			"Sour snup",
-			"Dragibus",
-			"Carensac",
-			"Fraizibus",
-			"Grain de millet",
-			"Starmint",
-			"Florent violette",
-			"Kimono",
-			"Pain Zan",
-			"Rotella",
-			"Zanoïd",
-			"Fraise tagada",
-			"Croco",
-			"Chamallows",
-			"Polka",
-			"Banane",
-			"Ourson",
-			"Filament"
-			};
-	
-	private String[] componentsNames = {
-			"Additifs",
-			"Enrobage",
-			"Arôme",
-			"Gélifiants",
-			"Sucre"
-	};
-	
 	private int maxStock;
-	private String[] object;
 	
 	Random r = new Random();
 	
@@ -54,10 +15,8 @@ public class Stock {
 		this.type = type;
 		if(type == "Bonbon"){
 			maxStock = 10000;
-			object = candyNames;
 		}else{
 			maxStock = 1000;
-			object = componentsNames;
 		}
 	}
 	
@@ -67,12 +26,13 @@ public class Stock {
 	}
 	
 	public void addStock(int index){
-		name = object[index];
-		quantity = alea(maxStock);
-	}
-	
-	public int getNumberOfElement(){
-		return object.length;
+		if(type == "Bonbon"){
+			name = Candies.values()[index].toString();
+			quantity = alea(maxStock);
+		}else{
+			name = Components.values()[index].toString();
+			quantity = alea(maxStock);
+		}
 	}
 	
 	private int alea(int maxRange){
