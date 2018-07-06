@@ -73,12 +73,13 @@ public class Order {
 			dateR = createNextDate(day, month, maxOfDays);
 		}
 		
-		String[] dates = {String.format("%02d", day)+"-"+String.format("%02d", month)+"-2018", String.format("%02d", dateE[0])+"-"+String.format("%02d",dateE[1])+"-2018", String.format("%02d", dateR[0])+"-"+String.format("%02d",dateR[1])+"-2018"};
+		String[] dates = {String.format("%02d", day)+"/"+String.format("%02d", month)+"/2018", String.format("%02d", dateE[0])+"/"+String.format("%02d",dateE[1])+"/2018", String.format("%02d", dateR[0])+"/"+String.format("%02d",dateR[1])+"/2018"};
 		
 		return dates;
 	}
 	
 	private int[] createNextDate(int startValue, int month, int max){
+		
 		int day = startValue + alea(5);
 		if(day>max){
 			day = day - max;
