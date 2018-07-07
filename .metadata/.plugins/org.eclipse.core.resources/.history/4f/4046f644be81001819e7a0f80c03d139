@@ -36,7 +36,17 @@ public class OracleDatabaseFiller {
 	}
 	
 	public void fillCommandTable(int order, String BuyDate, String expec, String reception, int id_client){
-		
+		System.out.println(CommandNumber++);
+		/*commandQueries.add("insert into commande values("+ CommandNumber++ +","+ BuyDate +","+ expec +","+ reception +","+ id_client +")");
+		try {
+			Statement statement = connection.connection.createStatement();
+			state = connection.connection.createStatement();
+			state.executeUpdate("insert into commande values("+ order +","+ BuyDate +","+ expec +","+ reception +","+ id_client +")");
+			statement.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 	
 	public void fillCandyClient(int order, String name, int quantity){
