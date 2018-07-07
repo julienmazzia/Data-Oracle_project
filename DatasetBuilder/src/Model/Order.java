@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class Order {
 	public static int orderNumber = 0;
+	public int id_name;
 	public String name;
 	public String firstname;
 	public String adress;
@@ -18,13 +19,15 @@ public class Order {
 	public String buyDate;
 	public String expec;
 	public String recep;
+	public int containerValue;
 	
 	public List<Candy> candies = new ArrayList<Candy>();
 	
 	Random r = new Random();
 	
-	public Order(){
+	public Order(int numberNames){
 		orderNumber ++;
+		id_name = alea(numberNames-1)+1;
 		name = Names.values()[alea(Names.values().length)].toString();
 		firstname = FirstNames.values()[alea(FirstNames.values().length)].toString();
 		adress = Adresses.values()[alea(Adresses.values().length)].toString();
@@ -37,18 +40,18 @@ public class Order {
 		expec = dates[1];
 		recep = dates[2];
 		
-		int containerValue = alea(Containers.values().length);
+		containerValue = alea(Containers.values().length);
 		container = Containers.values()[containerValue].toString();
 		addCandy(Containers.values()[containerValue].getQuantity());
 	}
 	
-	public static Order create(){
-		Order order = new Order();
+	public static Order create(int numberNames){
+		Order order = new Order(numberNames);
 		return order;
 	}
 	
 	private String[] createDates(){
-		int month = alea(12-1)+1;
+		int month = alea(12)+1;
 		int month2 = month;
 		int month3 = month;
 		int day = 0;
@@ -58,27 +61,28 @@ public class Order {
 		String dayFormat;
 		if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
 			maxOfDays = 31;
-			day = alea(maxOfDays-1) +1;
+			day = alea(maxOfDays) +1;
 			dateE = createNextDate(day, month, maxOfDays);
 			dateR = createNextDate(day, month, maxOfDays);
 		}else if(month == 4 || month == 6 || month == 9 || month == 11){
 			maxOfDays = 30;
-			day = alea(maxOfDays-1) +1;
+			day = alea(maxOfDays) +1;
 			dateE = createNextDate(day, month, maxOfDays);
 			dateR = createNextDate(day, month, maxOfDays);
 		}else if(month ==2){
 			maxOfDays = 28;
-			day = alea(maxOfDays-1) +1;
+			day = alea(maxOfDays) +1;
 			dateE = createNextDate(day, month, maxOfDays);
 			dateR = createNextDate(day, month, maxOfDays);
 		}
 		
-		String[] dates = {String.format("%02d", day)+"-"+String.format("%02d", month)+"-2018", String.format("%02d", dateE[0])+"-"+String.format("%02d",dateE[1])+"-2018", String.format("%02d", dateR[0])+"-"+String.format("%02d",dateR[1])+"-2018"};
+		String[] dates = {String.format("%02d", day)+""+String.format("%02d", month)+"2018", String.format("%02d", dateE[0])+""+String.format("%02d",dateE[1])+"2018", String.format("%02d", dateR[0])+""+String.format("%02d",dateR[1])+"2018"};
 		
 		return dates;
 	}
 	
 	private int[] createNextDate(int startValue, int month, int max){
+		
 		int day = startValue + alea(5);
 		if(day>max){
 			day = day - max;
@@ -99,5 +103,9 @@ public class Order {
 			quantity = quantity - candy.addCandies(quantity);
 			candies.add(candy);
 		}
+	}
+	
+	public int getOrder(){
+		return orderNumber;
 	}
 }

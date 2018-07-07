@@ -1,42 +1,32 @@
 package View;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTable;
-import javax.swing.border.EmptyBorder;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JScrollPane;
-
-import java.awt.CardLayout;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
-
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.factories.FormFactory;
-
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
 import javax.swing.JButton;
-
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.GridLayout;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 import Controller.DataSetController;
+
+import com.jgoodies.forms.factories.Borders.EmptyBorder;
+import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.RowSpec;
+import com.sun.glass.events.MouseEvent;
 
 public class Scenario extends JFrame implements IObservable{
 
@@ -72,14 +62,14 @@ public class Scenario extends JFrame implements IObservable{
 	public Scenario() {
 
 	    //Les titres des colonnes
-	    String  title[] = {"Index", "Pays", "Date de la commande", "Date de réception especté", "Date expédition"};
+	    String  title[] = {"Index", "Pays", "Date de la commande", "Date de reception especte", "Date expedition"};
 	    String[] typeValue = {"normale", "critique"};
 		
 		this.setSize(800, 600);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new javax.swing.border.EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -128,25 +118,25 @@ public class Scenario extends JFrame implements IObservable{
 		panel_1.add(textField, "4, 2, left, default");
 		textField.setColumns(10);
 		
-		JLabel lblTypeDeGnration_2 = new JLabel("Type de génération des commandes :");
+		JLabel lblTypeDeGnration_2 = new JLabel("Type de generation des commandes :");
 		panel_1.add(lblTypeDeGnration_2, "2, 6, left, default");
 		
 		comboBox_1 = new JComboBox(typeValue);
 		panel_1.add(comboBox_1, "4, 6, left, default");
 		
-		JLabel lblTypeDeGnration = new JLabel("Type de génration du stock de bonbon :\n");
+		JLabel lblTypeDeGnration = new JLabel("Type de genration du stock de bonbon :\n");
 		panel_1.add(lblTypeDeGnration, "2, 10");
 		
 		comboBox_2 = new JComboBox(typeValue);
 		panel_1.add(comboBox_2, "4, 10, left, default");
 		
-		JLabel lblTypeDeGnration_1 = new JLabel("Type de génération du stock de composant :");
+		JLabel lblTypeDeGnration_1 = new JLabel("Type de generation du stock de composant :");
 		panel_1.add(lblTypeDeGnration_1, "2, 14, right, default");
 		
 		comboBox = new JComboBox(typeValue);
 		panel_1.add(comboBox, "4, 14, left, default");
 		
-		JLabel lblRemplissezLeFormulaire = new JLabel("Remplissez le formulaire pour créer un scénario");
+		JLabel lblRemplissezLeFormulaire = new JLabel("Remplissez le formulaire pour creer un scenario");
 		lblRemplissezLeFormulaire.setBounds(6, 6, 340, 16);
 		contentPane.add(lblRemplissezLeFormulaire);
 		
@@ -162,7 +152,6 @@ public class Scenario extends JFrame implements IObservable{
 		
 		JButton btnAjouter = new JButton("Ajouter");
 		btnAjouter.addMouseListener(new MouseAdapter() {
-			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
@@ -175,7 +164,6 @@ public class Scenario extends JFrame implements IObservable{
 		
 		JButton btnEnlever = new JButton("Supprimer\n");
 		btnEnlever.addMouseListener(new MouseAdapter() {
-			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
@@ -188,7 +176,6 @@ public class Scenario extends JFrame implements IObservable{
 		
 		JButton btnModifier = new JButton("Modifier");
 		btnModifier.addMouseListener(new MouseAdapter() {
-			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});
@@ -211,7 +198,6 @@ public class Scenario extends JFrame implements IObservable{
 			}
 		});
 		btnValider.addMouseListener(new MouseAdapter() {
-			@Override
 			public void mouseClicked(MouseEvent e) {
 			}
 		});

@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Stock {
 	public String name;
+	public int id;
 	public String type;
 	public int quantity;
 	
@@ -26,11 +27,12 @@ public class Stock {
 	}
 	
 	public void addStock(int index){
+		id = index;
 		if(type == "Bonbon"){
-			name = Candies.values()[index].toString();
+			name = Candies.values()[index-1].toString();
 			quantity = alea(maxStock);
 		}else{
-			name = Components.values()[index].toString();
+			name = Components.values()[index-1].toString();
 			quantity = alea(maxStock);
 		}
 	}

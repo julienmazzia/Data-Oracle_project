@@ -10,12 +10,12 @@ public class StockCreator {
 		Stock stock;
 		
 		if(type=="Bonbon"){
-			lenght = Candies.values().length;
+			lenght = 12;
 		}else{
-			lenght = Components.values().length;
+			lenght = Components.values().length+1;
 		}
 		
-		for(int i=0; i<lenght; i++){
+		for(int i = 1; i<lenght; i++){
 			stock = Stock.create(type);
 			stock.addStock(i);
 			stocks.add(stock);

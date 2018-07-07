@@ -8,7 +8,7 @@ public enum Names {
 	Name_5("Pelfort"),
 	Name_6("Fibonaccio"),
 	Name_7("Iglesias"),
-	Name_8("Dürbrodsky"),
+	Name_8("Dubrodsky"),
 	Name_9("Ford"),
     ;
 

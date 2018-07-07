@@ -14,6 +14,7 @@ public class DataSetController implements Observer{
 	List<Stock> stockB;
 	List<Stock> stockC;
 
+	
 	@Override
 	public void update(int number) {
 		orders = Model.OrderCreator.createOrders(number);
